@@ -1,0 +1,125 @@
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="./weather.js"></script>
+
+    <style>
+        body {
+            margin: auto;
+            width: 50%;
+            padding: 30px;
+            height:300px;
+            position: relative;
+           
+            left:100px;
+            border-radius: 7px;
+            background-image: linear-gradient(to right, rgb(46, 163, 226) ,rgb(161, 239, 102))
+            }
+            .labeltext{
+                color:rgb(255, 255, 255);
+                font-size: 20px;
+                font-weight: normal;
+            }
+            .info_item{
+                position: relative;
+                text-align: center;
+                font-weight: normal;
+            }
+            .res{
+                background-color: rgb(189, 255, 151);
+                height: 350px;
+                width: 280px;
+                position: relative;
+                left:130px;
+                border-radius: 7px;
+                box-shadow:5px 5px 15px rgba(0, 0, 0, 0.127);
+            }
+            #city_name{
+                font-size: 30px;
+                top:10%;
+                color:rgb(75, 54, 27)
+            }
+            #temp{
+                font-size: 23px;
+                top:12%;
+                color:rgb(80, 62, 38)
+            }
+            #humidity{
+                font-size: 20px;
+                top:20%;
+                color:rgb(81, 47, 47)
+            }
+            #feel_like{
+                font-size: 20px;
+                top:25%;
+                color:rgb(96, 53, 53)
+            }
+            #wind_speed{
+                font-size: 18px;
+                top:30%;
+                color:rgb(93, 59, 59)
+            }
+            #desc{
+                font-size: 17px;
+                top:35%;
+                color:rgb(93, 59, 59)
+            }
+            
+    </style>
+
+</head>
+
+<body >
+    <form action="" method="get">
+       <div class="card-body">
+            <div class="row">
+                 <div class="col-md-9">
+                    <div class="form-group">
+                        <label for="" class="labeltext">Country/City Name :</label>
+                        <input type="text" name="c_name"  class="form-control" id="c_name"  placeholder="Country" required>
+                        <span style="color:rgb(72, 42, 42);font-size: 14px;">(Country/City Name Must be filled)</span>
+                    </div> 
+                </div>
+            </div>
+            <div class="row">
+                 <div class="col-md-9">
+                    <div class="form-group">
+                        <label for="" class="labeltext">State Code :</label>
+                        <input type="text" name="s_code"  class="form-control" id="s_code"  placeholder="State Code" >
+                    </div> 
+                </div>
+            </div>
+            <div class="row">
+                   <div class="col-md-9">
+                    <div class="form-group">
+                        <label for="" class="labeltext">Country Code :</label>
+                        <input type="text" name="c_code"  class="form-control" id="c_code"  placeholder="Country Code" >
+                    </div> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                 <div class="form-group">
+                    
+                    <button type="button" onclick="getWeather()" class="btn btn-primary">Fetch</button>
+                 </div> 
+             </div>
+         </div>
+            </div>
+       </div>
+
+       <div class="res">
+
+        <div class="info_item" id="city_name"></div>
+        <div class="info_item" id="temp"></div>
+        <div class="info_item" id="humidity"></div>
+        <div class="info_item" id="feel_like"></div>
+        <div class="info_item" id="wind_speed"></div>
+        <div class="info_item" id="desc"></div>
+
+       </div>
+    </form>
+</body>
+
+
+
